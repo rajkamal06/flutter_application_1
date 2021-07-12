@@ -101,8 +101,6 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  
-
   homeItem() {
     return ListView(
       children: [
@@ -346,6 +344,7 @@ class HomeView extends GetView<HomeController> {
       ],
     );
   }
+
   userPhoto() {
     return Container(
       height: 145,

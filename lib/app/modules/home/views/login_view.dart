@@ -24,8 +24,7 @@ class LoginView extends GetView {
                   height: 80,
                   decoration: BoxDecoration(
                     shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
+                        BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black,
