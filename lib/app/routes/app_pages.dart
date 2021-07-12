@@ -1,3 +1,4 @@
+import 'package:flutter_application_1/app/modules/home/views/teacherdetails_view.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_application_1/app/modules/home/views/home_view.dart';
@@ -9,15 +10,13 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.TEACHERDETAILS;
+  static const INITIAL = Routes.HOME;
 
   static final routes = [
     GetPage(
       name: _Paths.HOME,
       page: () => HomeView(),
-      children: [
-        
-      ],
+      children: [],
     ),
     GetPage(
       name: _Paths.LOGIN,
@@ -26,6 +25,10 @@ class AppPages {
     GetPage(
       name: _Paths.SEARCH,
       page: () => SearchView(),
+    ),
+    GetPage(
+      name: _Paths.TEACHERDETAILS,
+      page: () => TeacherdetailsView(),
     ),
   ];
 }

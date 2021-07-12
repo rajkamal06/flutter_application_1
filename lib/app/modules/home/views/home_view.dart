@@ -13,7 +13,7 @@ class HomeView extends GetView<HomeController> {
     final children = [
       homeItem(),
       SearchView(),
-      homeItem(),
+      NotificationView(),
       LoginView(),
     ];
     Get.lazyPut(() => HomeController());
@@ -371,15 +371,20 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user3.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user3.jpg'),
+                    ),
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 10),
                   child: Text(
-                    'Prerna',
+                    'Preeti',
                     style: TextStyle(
                       fontSize: 20,
                     ),
