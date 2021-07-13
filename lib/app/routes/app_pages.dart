@@ -1,3 +1,5 @@
+import 'package:flutter_application_1/app/modules/home/views/booknow_view.dart';
+import 'package:flutter_application_1/app/modules/home/views/notification_view.dart';
 import 'package:flutter_application_1/app/modules/home/views/teacherdetails_view.dart';
 import 'package:get/get.dart';
 
@@ -29,6 +31,14 @@ class AppPages {
     GetPage(
       name: _Paths.TEACHERDETAILS,
       page: () => TeacherdetailsView(),
+    ),
+     GetPage(
+      name: _Paths.NOTIFICATION,
+      page: () => NotificationView(),
+    ),
+    GetPage(
+      name: _Paths.BOOKNOW,
+      page: () => BooknowView(),
     ),
   ];
 }

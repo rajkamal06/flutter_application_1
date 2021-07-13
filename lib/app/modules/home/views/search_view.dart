@@ -9,10 +9,11 @@ class SearchView extends GetView {
     return Scaffold(
       body: ListView(
         children: [
+          // Search bar
           Container(
-            height: 45,
+            // height: 45,
             margin: EdgeInsets.all(10),
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.only(left: 10),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(
@@ -30,7 +31,9 @@ class SearchView extends GetView {
               ),
             ),
           ),
+          // buttons: Language button
           language(),
+          //  Video
           Container(
             height: 250,
             margin: const EdgeInsets.all(10),
@@ -53,6 +56,8 @@ class SearchView extends GetView {
               ],
             ),
           ),
+
+          // Teacher short details
           Container(
             width: MediaQuery.of(context).size.width,
             child: Row(
@@ -71,51 +76,63 @@ class SearchView extends GetView {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    // margin: EdgeInsets.only(top: 30)
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user3.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      // margin: EdgeInsets.only(top: 30)
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user3.jpg'),
+                    ),
                   ),
                 ),
                 Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text('Prerna Kumari',
-                              style: TextStyle(fontWeight: FontWeight.w900)),
-                          Icon(Icons.verified, color: Colors.red[700]),
-                        ],
-                      ),
-                      Text('HIndi Expert- 3 Year Experince'),
-                      Text(
-                        '120 Lessons Complete',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300, fontSize: 10),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: RatingBarIndicator(
-                              rating: 4.5,
-                              itemBuilder: (context, index) => Icon(
-                                Icons.star,
-                                color: Color(0xffDB0000),
+                  margin: EdgeInsets.only(top: 30, left: 10),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Prerna Kumari',
+                                style: TextStyle(fontWeight: FontWeight.w900)),
+                            Icon(Icons.verified, color: Colors.red[700]),
+                          ],
+                        ),
+                        Text('HIndi Expert- 3 Year Experince'),
+                        Text(
+                          '120 Lessons Complete',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w300, fontSize: 14),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: RatingBarIndicator(
+                                rating: 4.5,
+                                itemBuilder: (context, index) => Icon(
+                                  Icons.star,
+                                  color: Color(0xffDB0000),
+                                ),
+                                itemCount: 5,
+                                itemSize: 15.0,
+                                direction: Axis.horizontal,
                               ),
-                              itemCount: 5,
-                              itemSize: 15.0,
-                              direction: Axis.horizontal,
                             ),
-                          ),
-                          Container(
-                            child: Text('1800INR/H'),
-                          ),
-                        ],
-                      ),
-                    ],
+                            Container(
+                              margin: EdgeInsets.only( left: 100),
+                              child: Text('1800INR/H'),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -125,7 +142,7 @@ class SearchView extends GetView {
             padding: const EdgeInsets.all(20),
             child: Text(
               'This Code Can be used in log in to your Telegran account. We never ask if for anything else',
-              style: TextStyle(fontSize: 11),
+              style: TextStyle(fontSize: 15),
             ),
           ),
         ],
@@ -144,7 +161,7 @@ class SearchView extends GetView {
             width: 120,
             margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(6),
               color: Color(0xffDB0000),
               boxShadow: [
                 BoxShadow(
@@ -165,7 +182,7 @@ class SearchView extends GetView {
             width: 120,
             margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(6),
               color: Color(0xffDB0000),
               boxShadow: [
                 BoxShadow(
@@ -186,7 +203,7 @@ class SearchView extends GetView {
             width: 120,
             margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(6),
               color: Color(0xffDB0000),
               boxShadow: [
                 BoxShadow(

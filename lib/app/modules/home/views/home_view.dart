@@ -6,6 +6,7 @@ import 'package:flutter_application_1/app/modules/home/views/search_view.dart';
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+import 'notification_view.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
@@ -142,12 +143,10 @@ class HomeView extends GetView<HomeController> {
         Container(
           margin: EdgeInsets.only(top: 10),
           height: 60,
-          child: ListView(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            scrollDirection: Axis.horizontal,
+          child: Row(
             children: [
               Container(
-                width: 140,
+                width: 115,
                 margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -168,11 +167,11 @@ class HomeView extends GetView<HomeController> {
                     onPressed: () {},
                     child: Text(
                       'English',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     )),
               ),
               Container(
-                width: 140,
+                width: 115,
                 margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -193,11 +192,11 @@ class HomeView extends GetView<HomeController> {
                     onPressed: () {},
                     child: Text(
                       'Hindi',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     )),
               ),
               Container(
-                width: 140,
+                width: 115,
                 margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -218,59 +217,20 @@ class HomeView extends GetView<HomeController> {
                   onPressed: () {},
                   child: Text(
                     'Rajasthani',
-                    style: TextStyle(color: Colors.white, fontSize: 25),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
               Container(
-                width: 140,
-                margin: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xffDB0000),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      offset: const Offset(
-                        0.0,
-                        5.0,
-                      ),
-                      blurRadius: 5.0,
-                      spreadRadius: 2.0,
-                    ),
-                  ],
-                ),
-                child: TextButton(
-                  onPressed: () {},
+                // margin: EdgeInsets.only(top: 30),
+                child: InkWell(
+                  onTap: () {
+                    controller.currentIndex.value = 1;
+                    // Get.offNamed('/search');
+                  },
                   child: Text(
-                    'Marathi',
-                    style: TextStyle(color: Colors.white, fontSize: 25),
-                  ),
-                ),
-              ),
-              Container(
-                width: 140,
-                margin: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xffDB0000),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      offset: const Offset(
-                        0.0,
-                        5.0,
-                      ),
-                      blurRadius: 5.0,
-                      spreadRadius: 2.0,
-                    ),
-                  ],
-                ),
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Gujarati',
-                    style: TextStyle(color: Colors.white, fontSize: 25),
+                    "More..",
+                    style: TextStyle(color: Colors.blue),
                   ),
                 ),
               ),
@@ -411,9 +371,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user5.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user5.jpg'),
+                    ),
                   ),
                 ),
                 Container(
@@ -446,9 +411,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user3.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user3.jpg'),
+                    ),
                   ),
                 ),
                 Container(
@@ -481,9 +451,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user5.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user5.jpg'),
+                    ),
                   ),
                 ),
                 Container(
@@ -516,9 +491,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user3.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user3.jpg'),
+                    ),
                   ),
                 ),
                 Container(
@@ -551,9 +531,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user5.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user5.jpg'),
+                    ),
                   ),
                 ),
                 Container(
@@ -586,9 +571,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user3.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user3.jpg'),
+                    ),
                   ),
                 ),
                 Container(
@@ -621,9 +611,14 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/user5.jpg'),
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('/teacherdetails');
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/user5.jpg'),
+                    ),
                   ),
                 ),
                 Container(

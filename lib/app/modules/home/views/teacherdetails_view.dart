@@ -15,6 +15,7 @@ class TeacherdetailsView extends GetView {
       ),
       body: ListView(
         children: [
+          // Video
           Container(
             height: 250,
             margin: const EdgeInsets.all(10),
@@ -37,6 +38,8 @@ class TeacherdetailsView extends GetView {
               ],
             ),
           ),
+
+          //Teacher Short details like : name experince,fees,photo
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -102,22 +105,26 @@ class TeacherdetailsView extends GetView {
               ],
             ),
           ),
+
+          // Buttons :schedule, 999 Review, Message
           Container(
-            margin: EdgeInsets.only(left: 10, right: 10),
+            margin: EdgeInsets.only(left: 40, right: 40),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
+                  height: 45,
                   width: 98,
                   margin: EdgeInsets.only(top: 20),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(8),
                     color: Color(0xffDB0000),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black26,
-                        blurRadius: 5.0,
+                        blurRadius: 2.0,
                         spreadRadius: 2.0,
+                        offset: Offset(0, 5),
                       ),
                     ],
                   ),
@@ -129,55 +136,64 @@ class TeacherdetailsView extends GetView {
                       )),
                 ),
                 Container(
+                  height: 45,
                   width: 98,
                   margin: EdgeInsets.only(top: 20),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(8),
                     color: Color(0xffDB0000),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black26,
-                        blurRadius: 5.0,
+                        blurRadius: 2.0,
                         spreadRadius: 2.0,
+                        offset: Offset(0, 5),
                       ),
                     ],
                   ),
                   child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        '999 Rreview',
+                        '999 Review',
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
                 ),
                 Container(
+                  height: 45,
                   width: 98,
                   margin: EdgeInsets.only(top: 20),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(8),
                     color: Color(0xffDB0000),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black26,
-                        blurRadius: 5.0,
+                        blurRadius: 2.0,
                         spreadRadius: 2.0,
+                        offset: Offset(0, 5),
                       ),
                     ],
                   ),
                   child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Message',
-                      style: TextStyle(color: Colors.white, fontSize: 12),
-                    ),
-                  ),
+                      onPressed: () {},
+                      child: Text(
+                        'Message',
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                      )),
                 ),
               ],
             ),
           ),
+
+          // Divider below Button
           Container(
-            margin: EdgeInsets.only(right: 10, left: 10),
-            child: Divider(),
+            margin: EdgeInsets.only(right: 45, left: 45, top: 10),
+            child: Divider(
+              thickness: 2,
+            ),
           ),
+
+          // About Me
           Container(
             margin: EdgeInsets.all(10),
             child: Text(
@@ -185,6 +201,8 @@ class TeacherdetailsView extends GetView {
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900),
             ),
           ),
+
+          // about Me description
           Container(
             margin: EdgeInsets.only(left: 10, top: 20, right: 10),
             child: ReadMoreText(
@@ -204,6 +222,8 @@ class TeacherdetailsView extends GetView {
                   color: Colors.blue),
             ),
           ),
+
+          //  Divider below About Me
           Container(
             margin: EdgeInsets.only(top: 25),
             child: Divider(
@@ -211,6 +231,8 @@ class TeacherdetailsView extends GetView {
               thickness: 0.5,
             ),
           ),
+
+          //  28 Reviews
           Container(
             margin: EdgeInsets.all(10),
             child: Text(
@@ -268,14 +290,13 @@ class TeacherdetailsView extends GetView {
             ),
           ),
           Container(
-                       margin: EdgeInsets.all(10),
-
+            margin: EdgeInsets.all(10),
             child: Divider(
               color: Colors.black,
               thickness: 0.5,
             ),
           ),
-           Container(
+          Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -326,49 +347,50 @@ class TeacherdetailsView extends GetView {
           ),
 
           Container(
-                  width: 80,
-                  // padding: const EdgeInsets.all(10),
-                  margin: EdgeInsets.only(top: 20,left: 90,right: 90),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Color(0xff909090),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 2.0,
-                        spreadRadius: 2.0,
-                      ),
-                    ],
-                  ),
-                  child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Read 99+ More Reviews',
-                        style: TextStyle(color: Colors.blue[900], fontSize: 12),
-                      )),
+            width: 80,
+            // padding: const EdgeInsets.all(10),
+            margin: EdgeInsets.only(top: 20, left: 90, right: 90),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Color(0xff909090),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 2.0,
+                  spreadRadius: 2.0,
                 ),
+              ],
+            ),
+            child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Read 99+ More Reviews',
+                  style: TextStyle(color: Colors.blue[900], fontSize: 12),
+                )),
+          ),
 
-                Container(
-
-                  margin: EdgeInsets.only(top: 20,right: 20,left: 20,bottom:10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Color(0xffDB0000),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 2.0,
-                        spreadRadius: 2.0,
-                      ),
-                    ],
-                  ),
-                  child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Book Lesson',
-                        style: TextStyle(color: Colors.white, fontSize: 12),
-                      )),
+          Container(
+            margin: EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Color(0xffDB0000),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 2.0,
+                  spreadRadius: 2.0,
                 ),
+              ],
+            ),
+            child: TextButton(
+                onPressed: () {
+                  Get.toNamed('/booknow');
+                },
+                child: Text(
+                  'Book Lesson',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                )),
+          ),
         ],
       ),
     );
