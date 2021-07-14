@@ -313,324 +313,53 @@ class HomeView extends GetView<HomeController> {
         // child: Padding(
         //   padding: const EdgeInsets.only(top: 20),
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user3.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Preeti',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
+          teachers('Preeti', 'assets/user3.jpg'),
+          teachers('Dharmedra', 'assets/user5.jpg'),
+          teachers('Prerna', 'assets/user3.jpg'),
+          teachers('Dharmedra', 'assets/user5.jpg'),
+          teachers('Prerna', 'assets/user3.jpg'),
+          teachers('Dharmedra', 'assets/user5.jpg'),
+          teachers('Pooja', 'assets/user3.jpg'),
+          teachers('Dharmedra', 'assets/user5.jpg'),
+        ],
+      ),
+    );
+  }
+
+  teachers(name, imagepath) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 5.0,
+                  offset: Offset(0, 4),
                 ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user5.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Dharmendra',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
+            child: InkWell(
+              onTap: () {
+                Get.toNamed('/teacherdetails');
+              },
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage(imagepath),
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user3.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Prerna',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user5.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Dharmendra',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user3.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Prerna',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user5.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Dharmendra',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user3.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Pooja',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape:
-                        BoxShape.circle, // BoxShape.circle or BoxShape.retangle
-                    //color: const Color(0xFF66BB6A),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Get.toNamed('/teacherdetails');
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/user5.jpg'),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    'Dharmendra',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
+          Container(
+            padding: const EdgeInsets.only(top: 10),
+            child: Text(
+              name,
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
           ),
         ],
